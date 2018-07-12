@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Navbar, NavItem } from 'react-materialize';
 
 import Home from "./Home";
 import Login from "./Login";
@@ -39,6 +40,14 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <Navbar brand='BMI' right>
+            
+              <NavItem><Link to="/login">Login</Link></NavItem>
+            
+            
+              <NavItem><Link to="/signup">Sign Up</Link></NavItem>
+            
+          </Navbar>
           <PrivateRoute
             exact
             path="/"
